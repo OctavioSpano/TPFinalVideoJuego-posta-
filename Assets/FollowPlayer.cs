@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SeguimientoJugador : MonoBehaviour
+public class FollowPlayer : MonoBehaviour
 {
     public Transform target;
     NavMeshAgent nav;
@@ -17,6 +17,6 @@ public class SeguimientoJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nav.SetDestination(target.position);
+        nav.SetDestination(target.position); 
     }
 }
