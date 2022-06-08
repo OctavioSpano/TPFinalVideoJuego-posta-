@@ -32,11 +32,5 @@ public class PlayerMovement : MonoBehaviour {
             transform.Rotate(0, -rotationSpeed, 0);
         }
     }
-    void OnCollisionExit(Collision col2)
-    {
-        if (col2.gameObject.name == "Plane")
-        {
-            transform.position = new Vector3(0, 0.5f, 0);
-        }
-    }
+    
 }

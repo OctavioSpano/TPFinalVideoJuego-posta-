@@ -19,7 +19,7 @@ public class GeneradorPolicia : MonoBehaviour
         {
             xPos = Random.Range(-13, 14);
             zPos = Random.Range(-13, 13);
-            Instantiate(policia, new Vector3 (xPos, 0.5f, zPos), Quaternion.identity);
+            policia = Instantiate(policia, new Vector3 (xPos, 0.5f, zPos), Quaternion.identity);
             yield return new WaitForSeconds(5);
             enemyCount += 1;
         }

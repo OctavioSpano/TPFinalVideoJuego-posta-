@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class VidaJugador : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,12 +18,8 @@ public class VidaJugador : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision col)
+    public void playAgain()
     {
-        Debug.Log("Toco");
-        if (col.gameObject.name == "Policia(Clone)")
-        {
-            Destroy(gameObject);
-        }
+        SceneManager.LoadScene("ProyectoFinal");
     }
 }
