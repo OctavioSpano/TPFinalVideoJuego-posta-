@@ -13,6 +13,7 @@ public class VidaJugador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        txtCountdown.text = "0";
         VidasRestantesTxt.text += vidasrestantes.ToString();
     }
 
@@ -21,9 +22,11 @@ public class VidaJugador : MonoBehaviour
     {
         VidasRestantesTxt.text = "Vidas restantes: " + vidasrestantes;
         txtCountdown.text = Mathf.FloorToInt(Time.time).ToString();
-        if (txtCountdown.text == "5")
+
+        if (txtCountdown.text == "10")
         {
-            Debug.Log("GANASTE");
+            SceneManager.LoadScene("Ganaste");
+            Debug.Log("Ganaste");
         }
     }
 
@@ -40,7 +43,6 @@ public class VidaJugador : MonoBehaviour
             {
                 Destroy(gameObject);
                 SceneManager.LoadScene("GameOver");
-                txtCountdown.text = "0";
             }
 
         }
@@ -58,7 +60,6 @@ public class VidaJugador : MonoBehaviour
             {
                 Destroy(gameObject);
                 SceneManager.LoadScene("GameOver");
-                txtCountdown.text = "0";
             }
         }
     }
