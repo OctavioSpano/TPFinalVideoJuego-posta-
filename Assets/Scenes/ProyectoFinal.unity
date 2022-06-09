@@ -845,6 +845,11 @@ MonoBehaviour:
   xPos: 0
   zPos: 0
   enemyCount: 0
+  elegirNumero: 0
+  yutaSound:
+  - {fileID: 8300000, guid: 2b6b8e11463220b4f8ec051d0617f028, type: 3}
+  - {fileID: 8300000, guid: 59535b84fe32a6c44b8d9c58d510e1ac, type: 3}
+  - {fileID: 8300000, guid: d0a2e7101c46f7849911ff259fd9884d, type: 3}
 --- !u!4 &1690502447
 Transform:
   m_ObjectHideFlags: 0
@@ -1055,9 +1060,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
+  m_Text: "Tiempo: \n"
 --- !u!222 &1847038338
 CanvasRenderer:
   m_ObjectHideFlags: 0

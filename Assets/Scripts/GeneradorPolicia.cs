@@ -6,7 +6,9 @@ public class GeneradorPolicia : MonoBehaviour
 {
     public GameObject policia;
     public float xPos, zPos, enemyCount;
-
+    public int elegirNumero;
+    AudioSource audio;
+    public AudioClip [] yutaSound;
 
     void Start()
     {
@@ -19,7 +21,10 @@ public class GeneradorPolicia : MonoBehaviour
         {
             xPos = Random.Range(-13, 14);
             zPos = Random.Range(-13, 13);
-            policia = Instantiate(policia, new Vector3 (xPos, 0.5f, zPos), Quaternion.identity);
+            elegirNumero = Random.Range(0, 3);
+            policia = Instantiate(policia, new Vector3(xPos, 0.5f, zPos), Quaternion.identity);
+            audio.clip = yutaSound [elegirNumero];
+            audio.Play();
             yield return new WaitForSeconds(5);
             enemyCount += 1;
         }

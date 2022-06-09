@@ -21,12 +21,11 @@ public class VidaJugador : MonoBehaviour
     void Update()
     {
         VidasRestantesTxt.text = "Vidas restantes: " + vidasrestantes;
-        txtCountdown.text = Mathf.FloorToInt(Time.time).ToString();
+        txtCountdown.text = "Tiempo: " + Mathf.FloorToInt(Time.timeSinceLevelLoad).ToString();
 
         if (txtCountdown.text == "10")
         {
             SceneManager.LoadScene("Ganaste");
-            Debug.Log("Ganaste");
         }
     }
 
