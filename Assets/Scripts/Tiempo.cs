@@ -23,7 +23,7 @@ public class Tiempo : MonoBehaviour
         tiempo = Mathf.FloorToInt(Time.timeSinceLevelLoad);
         txtCountdown.text = "Tiempo: " + tiempo.ToString();
 
-        if (tiempo == 20)
+        if (tiempo == 40)
         {
             SceneManager.LoadScene("Ganaste");
         }
