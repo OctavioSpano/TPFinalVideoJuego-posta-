@@ -13,7 +13,6 @@ public class VidaJugador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        txtCountdown.text = "0";
         VidasRestantesTxt.text += vidasrestantes.ToString();
     }
 
@@ -21,12 +20,6 @@ public class VidaJugador : MonoBehaviour
     void Update()
     {
         VidasRestantesTxt.text = "Vidas restantes: " + vidasrestantes;
-        txtCountdown.text = "Tiempo: " + Mathf.FloorToInt(Time.timeSinceLevelLoad).ToString();
-
-        if (txtCountdown.text == "10")
-        {
-            SceneManager.LoadScene("Ganaste");
-        }
     }
 
     void OnCollisionEnter(Collision col)
